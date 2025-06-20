@@ -14,7 +14,7 @@
         <arg name="ns" value="RosAria"/>
     </include>
 
-    <node 
+    <!-- node 
         name="p3dx_potential_field" 
         pkg="p3dx_potential_fields" 
         type="p3dx_teleopkey.py" 
@@ -22,6 +22,6 @@
         required="true">
         
         <remap from="cmd_vel" to="/RosAria/cmd_vel"/>
-    </node>
+    </node -->
 
 </launch>
