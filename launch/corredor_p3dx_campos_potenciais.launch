@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!-- p3dx_simulation.launch -->
+<launch>
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    	<arg name="world_name" value="$(find p3dx_potential_fields)/worlds/mundo_corredor.world"/>
+        <arg name="paused" value="false"/>
+        <arg name="use_sim_time" value="true"/>
+        <arg name="gui" value="true"/>
+        <arg name="headless" value="false"/>
+        <arg name="debug" value="false"/>
+    </include>
+
+    <include file="$(find p3dx_gazebo)/launch/p3dx.launch">
+        <arg name="ns" value="RosAria"/>
+    </include>
+
+    <node 
+        name="p3dx_potential_field" 
+        pkg="p3dx_potential_fields" 
+        type="p3dx_teleopkey.py" 
+        output="screen"
+        required="true">
+        
+        <remap from="cmd_vel" to="/RosAria/cmd_vel"/>
+    </node>
+
+</launch>
