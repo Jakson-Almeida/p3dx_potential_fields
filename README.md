@@ -35,7 +35,7 @@ ROS package for autonomous navigation of Pioneer P3-DX robot using potential fie
 
 Launch the Gazebo simulation with potential fields navigation:
 ```bash
-roslaunch p3dx_potential_fields corredor_p3dx_campos_potenciais.launch
+roslaunch p3dx_potential_fields p3dx_world.launch
 ```
 
 ### Interactive Control
