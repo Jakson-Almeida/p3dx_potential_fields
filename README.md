@@ -40,19 +40,21 @@ roslaunch p3dx_potential_fields p3dx_world.launch
 
 ### Interactive Control
 
-1. In a new terminal, start the visualization:
+1. In a new terminal, start the potential fields:
+   ```bash
+   rosrun p3dx_potential_fields p3dx_potential_field.py
+   ```
+Enter goal coordinates when prompted in the terminal.
+
+2. In a new terminal, start the visualization:
    ```bash
    rosrun p3dx_potential_fields p3dx_view.py
    ```
 
-2. In the visualization window:
-   - Enter goal coordinates when prompted in the terminal
+3. In the visualization window:
    - Press SPACE to clear the visualization
    - Use mouse scroll to zoom in/out
 
-### Keyboard Shortcuts (Visualization)
-- `SPACE`: Clear all obstacles and trajectory
-- `Mouse Scroll`: Zoom in/out
 
 ## Nodes
 
@@ -65,9 +67,19 @@ roslaunch p3dx_potential_fields p3dx_world.launch
   - `/RosAria/cmd_vel` (velocity commands)
 
 ### p3dx_view.py
-- Implements potential field algorithm
 - Visualization tool showing:
   - Robot position (blue)
+  - Obstacles (red)
+  - Trajectory (green)
+
+### potential_fields_and_visualization.py
+- Implements potential field algorithm
+- Subscribes to:
+  - `/RosAria/odom` (robot pose)
+  - `/RosAria/laser/scan` (laser data)
+- Publishes to:
+  - `/RosAria/cmd_vel` (velocity commands)
+- Visualization tool showing:
   - Obstacles (red)
   - Trajectory (green)
 - Interactive goal input via terminal
