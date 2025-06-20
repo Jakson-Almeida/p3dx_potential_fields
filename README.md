@@ -9,7 +9,6 @@ ROS package for autonomous navigation of Pioneer P3-DX robot using potential fie
 - Gazebo (comes with ROS desktop-full installation)
 - Pioneer P3DX packages:
   ```bash
-  sudo apt-get install ros-noetic-rosaria
   git clone https://github.com/mario-serna/pioneer_p3dx_model.git ~/catkin_ws/src/p3dx_gazebo
   ```
 
