@@ -2,7 +2,7 @@
 
 ROS package for autonomous navigation of Pioneer P3-DX robot using potential fields algorithm in Gazebo simulation.
 
-(!Potential Fields)[potential_fields.gif]
+!(Potential Fields)[potential_fields.gif]
 
 ## Prerequisites
 
