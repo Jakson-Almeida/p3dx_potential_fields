@@ -63,6 +63,7 @@ roslaunch p3dx_potential_fields corredor_p3dx_campos_potenciais.launch
   - `/RosAria/cmd_vel` (velocity commands)
 
 ### p3dx_view.py
+- Implements potential field algorithm
 - Visualization tool showing:
   - Robot position (blue)
   - Obstacles (red)
