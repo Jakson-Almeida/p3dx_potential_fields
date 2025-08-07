@@ -125,7 +125,7 @@ def potential_field(goal=(0,0), K_att=1.0, K_rep=1.0, K_omega=1.0, epsilon_0=1.0
         omega = np.sign(omega) * min(abs(omega), omega_max)  # Limita a velocidade angular
 
         # Publicar para o robô P3dx
-        global pub
+        #global pub
         twist_msg = Twist()  # Criando uma instância de Twist
         twist_msg.linear.x = v       # Velocidade linear
         twist_msg.angular.z = omega  # Velocidade angular
